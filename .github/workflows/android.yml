@@ -16,15 +16,15 @@
         haxe-version: 4.2.5
 
     - name: Install Haxelib libraries
-  run: |
-    haxelib install lime --quiet
-    haxelib install openfl --quiet
-    haxelib install flixel --quiet
-    haxelib install flixel-addons --quiet
-    haxelib install flixel-ui --quiet
-    haxelib install hxcpp --quiet
-    haxelib install actuate --quiet
-    haxelib install tjson --quiet
+      run: |
+        haxelib install lime --quiet
+        haxelib install openfl --quiet
+        haxelib install flixel --quiet
+        haxelib install flixel-addons --quiet
+        haxelib install flixel-ui --quiet
+        haxelib install hxcpp --quiet
+        haxelib install actuate --quiet
+        haxelib install tjson --quiet
 
     - name: Setup Lime
       run: |
