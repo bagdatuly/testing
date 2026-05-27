@@ -28,8 +28,9 @@
 
     - name: Install linc_luajit
       run: |
-        haxelib git linc_luajit
-        https://github.com/superpowers04/linc_luajit
+        git clone 
+        https://github.com/superpowers04/linc_luajit.git
+        haxelib dev linc_luajit linc_luajit
         
     - name: Setup Lime
       run: |
