@@ -25,8 +25,6 @@
         haxelib install hxcpp --quiet
         haxelib install actuate --quiet
         haxelib install tjson --quiet
-        haxelib git linc_luajit 
-        https://github.com/jigsaw-4277821/linc_luajit
         
     - name: Install linc_luajit
       run: |
