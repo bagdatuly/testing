@@ -17,19 +17,19 @@
 
     - name: Install Haxelib libraries
       run: |
-        haxelib install lime --quiet
-        haxelib install openfl --quiet
-        haxelib install flixel --quiet
-        haxelib install flixel-addons --quiet
-        haxelib install flixel-ui --quiet
-        haxelib install hxcpp --quiet
-        haxelib install actuate --quiet
-        haxelib install tjson --quiet
-        
+        yes | haxelib install lime
+        yes | haxelib install openfl
+        yes | haxelib install flixel
+        yes | haxelib install flixel-addons
+        yes | haxelib install flixel-ui
+        yes | haxelib install hxcpp
+        yes | haxelib install actuate
+        yes | haxelib install tjson
+
     - name: Install linc_luajit
       run: |
-        git clone https://github.com/jigsaw-4277821/linc_luajit.git
-        haxelib dev linc_luajit linc_luajit
+        haxelib git linc_luajit
+        https://github.com/superpowers04/linc_luajit
         
     - name: Setup Lime
       run: |
