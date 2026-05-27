@@ -28,6 +28,11 @@
         haxelib git linc_luajit 
         https://github.com/jigsaw-4277821/linc_luajit
         
+    - name: Install linc_luajit
+      run: |
+        git clone https://github.com/jigsaw-4277821/linc_luajit.git
+        haxelib dev linc_luajit linc_luajit
+        
     - name: Setup Lime
       run: |
         haxelib run lime setup
