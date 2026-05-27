@@ -1,10 +1,10 @@
-name: Android APK
+ name: Android APK
 
-on:
+ on:
   workflow_dispatch:
 
-jobs:
-  build:
+ jobs:
+   build:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,13 +15,17 @@ jobs:
       with:
         haxe-version: 4.2.5
 
-    - name: Install libs
+    - name: Install Haxelib libraries
       run: |
-        haxelib install lime
-        haxelib install openfl
-        haxelib install flixel
-        haxelib install hxcpp
+        haxelib install lime --quiet
+        haxelib install openfl --quiet
+        haxelib install flixel --quiet
+        haxelib install hxcpp --quiet
+
+    - name: Setup Lime
+      run: |
+        haxelib run lime setup
 
     - name: Build APK
       run: |
-        lime build android
+        haxelib run lime build android
